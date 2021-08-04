@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <br>
+    <label for="Valor"> Valor: </label>
+    <input type="number" id="iValor">
+
+    <br><br>
+    <button type="button" onclick="CalcularShape()">
+        Calcular
+    </button>
+
+
+    <script>
+        function CalcularShape(){
+            var valor = $("#iValor").val();
+            if($.isNumeric(valor) && valor >= 1 && valor < 104) {
+                var resultado = shapeArea(valor);
+                alert("Resultado " + resultado);
+            }else{
+                alert("Valor no permitido");
+            }
+            
+        }
+
+        function shapeArea(n) {
+            if(n<0){
+                return 0;
+            }
+            return (n*n) + ((n-1)*(n-1));
+        }
+    </script>
+</body>
+</html>
