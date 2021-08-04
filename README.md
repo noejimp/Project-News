@@ -6,7 +6,9 @@ Angular > ng serve
 user-api > npm start 
 
 
-Table 
+Table
+
+
 CREATE TABLE users2 (
 	id int auto_increment,
 	username varchar(255) ,
