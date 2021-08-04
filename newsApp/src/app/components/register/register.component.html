@@ -1,0 +1,22 @@
+<div class='col-md-4 offset-4 mt-5 text-center' *ngIf='!this.isLogin'>
+    <h4>My News Feed</h4>
+    <br><br><br>
+    <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+        <div class='form-group'>
+            <input class='form-control' type="text" name="username" placeholder="User" ngModel>
+        </div> 
+        <br>
+        <div class='form-group'>
+            <input class='form-control' type="email" name="email" placeholder="Mail" ngModel>
+        </div>
+        <br>       
+        <div class='form-group'>
+            <input class='form-control' type="password" name="password" placeholder="Password" ngModel>
+        </div>
+        <br><br>
+        <input class='btn btn-outline-info' type="submit" value="Sign Up">
+    </form>
+</div>
+<div class='col-md-4 offset-4 mt-5' *ngIf='this.isLogin'>
+    <h5>You are logged in!</h5>
+</div>
